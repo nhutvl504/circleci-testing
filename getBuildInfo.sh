@@ -54,26 +54,22 @@ echo -e "---------------"
 mongod --version | grep "db version"
 echo -e "\ncouchDB version"
 echo -e "---------------"
-curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"version":.*?[^\\]",'
+curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"version":.*?[^\\]",' | grep -m 1 "version"
 echo -e "\nNeo4j version"
 echo -e "-------------"
-# This is a hack, and I don't like it
-curl -s -XGET http://localhost:7474/db/data/
+sudo apt-cache policy neo4j 2>> /dev/null | grep "Installed"
 echo -e "\nRabbitMQ Version"
 echo -e "--------------"
-sudo rabbitmqctl status | grep "RabbitMQ"
+sudo apt-cache policy rabbitmq-server 2>> /dev/null | grep "Installed"
 echo -e "\nElasticSearch Version"
 echo -e "--------------"
 sudo apt-cache policy elasticsearch 2>> /dev/null | grep "Installed"
 echo -e "\nSphinx Version"
 echo -e "---------------------"
 searchd --help | grep "^Sphinx"
-echo -e "\nFirefox Version" | grep "Firefox"
+echo -e "\n\nFirefox Version" | grep "Firefox"
 echo -e "---------------"
 firefox --version 2>> /dev/null
-echo -e "\nChrome Version"
-echo -e "--------------"
-whereis chrome
 echo -e "\nant Version"
 echo -e "--------------"
 ant -version
