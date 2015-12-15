@@ -54,24 +54,24 @@ echo -e "---------------"
 mongod --version | grep "db version"
 echo -e "\ncouchDB version"
 echo -e "---------------"
-curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"bersion":.*?[^\\]",'
+curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"version":.*?[^\\]",'
 echo -e "\nNeo4j version"
 echo -e "-------------"
-find / -name "neo4j"
+ls -R /usr/share/neo4j
 echo -e "\nRabbitMQ Version"
 echo -e "--------------"
-sudo rabbitmqctl status
-echo -e "\nRabbitMQ Version"
+sudo rabbitmqctl status | grep "RabitMQ"
+echo -e "\nElasticSearch Version"
 echo -e "--------------"
+curl -s -XGET 'localhost:9200' 
 echo -e "\nSphinx Version"
 echo -e "---------------------"
 searchd --help | grep "Sphinx"
-curl -s -XGET 'localhost:9200' 
 echo -e "\nFirefox Version"
 echo -e "---------------"
 firefox --version
 echo -e "\nChrome Version"
 echo -e "--------------"
-chromium --version
+whereis chrome
 
 exit 0
