@@ -1,8 +1,8 @@
 machine:
   node:
-    version 12.0
+    version 0.12
     
-dependancies:
+dependencies:
   pre:
     - nvm install 4.0
     
