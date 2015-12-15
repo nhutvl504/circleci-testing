@@ -57,21 +57,34 @@ echo -e "---------------"
 curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"version":.*?[^\\]",'
 echo -e "\nNeo4j version"
 echo -e "-------------"
-ls -R /usr/share/neo4j
+# This is a hack, and I don't like it
+grep "plist version" /usr/share/neo4j/system/resources/org.neo4j.server.plist
 echo -e "\nRabbitMQ Version"
 echo -e "--------------"
-sudo rabbitmqctl status | grep "RabitMQ"
+sudo rabbitmqctl status | grep "RabbitMQ"
 echo -e "\nElasticSearch Version"
 echo -e "--------------"
-curl -s -XGET 'localhost:9200' 
+curl -s -XGET 'http://localhost:9200/' 
 echo -e "\nSphinx Version"
 echo -e "---------------------"
 searchd --help | grep "Sphinx"
-echo -e "\nFirefox Version"
+echo -e "\nFirefox Version" | grep "Firefox"
 echo -e "---------------"
 firefox --version
 echo -e "\nChrome Version"
 echo -e "--------------"
-whereis chrome
+sudo apt-cache policy "googl-chrome-stable" | grep "Installed"
+echo -e "\nant Version"
+echo -e "--------------"
+ant --version
+echo -e "\nmvn version"
+echo -e "--------------"
+mvn --version
+echo -e "\nJava Version"
+echo -e "--------------"
+java --version
+echo -e "\nDefault locale"
+echo -e "--------------"
+echo $LC_CTYPE
 
 exit 0
