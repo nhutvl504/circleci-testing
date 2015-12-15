@@ -70,19 +70,19 @@ echo -e "---------------------"
 searchd --help | grep "Sphinx"
 echo -e "\nFirefox Version" | grep "Firefox"
 echo -e "---------------"
-firefox --version
+firefox --version 2>> /dev/null
 echo -e "\nChrome Version"
 echo -e "--------------"
-sudo apt-cache policy "googl-chrome-stable" | grep "Installed"
+whereis chrome
 echo -e "\nant Version"
 echo -e "--------------"
-ant --version
+ant -version
 echo -e "\nmvn version"
 echo -e "--------------"
 mvn --version
 echo -e "\nJava Version"
 echo -e "--------------"
-java --version
+java -version
 echo -e "\nDefault locale"
 echo -e "--------------"
 echo $LC_CTYPE
