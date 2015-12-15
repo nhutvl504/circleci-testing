@@ -4,7 +4,7 @@ machine:
     
 dependencies:
   post:
-    - sudo dpkg --get-selections > listing.txt; tar -cvjf $CIRCLE_ARTIFACTS/listing.tar.bz2 listing.txt
+    - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
     
 test:
   override:
