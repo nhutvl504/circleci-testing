@@ -13,6 +13,8 @@ echo -e "-------------"
 gcc --version | grep "gcc"
 echo -e "Docker Version"
 echo -e "--------------"
-sudo docker version
+sudo systemctl start docker >> /dev/null
+docker version
+sudo systemctl stop docker >> /dev/null
 
 exit 0
