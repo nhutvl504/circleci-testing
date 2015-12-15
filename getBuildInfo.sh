@@ -13,4 +13,6 @@ echo -e "-------------"
 gcc --version | grep "gcc"
 echo -e "Docker Version"
 echo -e "--------------"
-docker version
+sudo docker version
+
+exit 0
