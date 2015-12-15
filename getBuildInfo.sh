@@ -13,5 +13,4 @@ echo -e "-------------"
 gcc --version | grep "gcc"
 echo -e "Docker Version"
 echo -e "--------------"
-docker version
-docker version --format '{{.Server.Version}}'
+docker version --format '{{.Client}}'
