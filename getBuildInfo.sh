@@ -58,16 +58,16 @@ curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"version":.*?[^\\]",'
 echo -e "\nNeo4j version"
 echo -e "-------------"
 # This is a hack, and I don't like it
-grep "plist version" /usr/share/neo4j/system/resources/org.neo4j.server.plist
+grep "version" /usr/share/neo4j/system/resources/org.neo4j.server.plist
 echo -e "\nRabbitMQ Version"
 echo -e "--------------"
 sudo rabbitmqctl status | grep "RabbitMQ"
 echo -e "\nElasticSearch Version"
 echo -e "--------------"
-curl -s -XGET 'http://localhost:9200/' 
+sudo apt-cache policy elasticsearch 2>> /dev/null | grep "Installed"
 echo -e "\nSphinx Version"
 echo -e "---------------------"
-searchd --help | grep "Sphinx"
+searchd --help | grep "^Sphinx"
 echo -e "\nFirefox Version" | grep "Firefox"
 echo -e "---------------"
 firefox --version 2>> /dev/null
@@ -82,9 +82,9 @@ echo -e "--------------"
 mvn --version
 echo -e "\nJava Version"
 echo -e "--------------"
-java -version
+java -version | grep "java version"
 echo -e "\nDefault locale"
 echo -e "--------------"
-echo $LC_CTYPE
+echo $LANG
 
 exit 0
