@@ -51,12 +51,26 @@ echo -e "------------"
 riak version
 echo -e "\nMongoDB version"
 echo -e "---------------"
-mongod --version
+mongod --version | grep "db version"
 echo -e "\ncouchDB version"
 echo -e "---------------"
-curl http://127.0.0.1:5984/_config/vendor/version | grep -m 1 "version"
+curl http://127.0.0.1:5984/ | grep -m 1 "version"
 echo -e "\nNeo4j version"
 echo -e "-------------"
-whereis  version.rb
+find / -name "version.rb"
+echo -e "\nRabbitMQ Version"
+echo -e "--------------"
+rabbitmqctl status
+echo -e "\nRabbitMQ Version"
+echo -e "--------------"
+echo -e "\nElasticSearch Version"
+echo -e "---------------------"
+curl -XGET 'localhost:9200' 
+echo -e "\nFirefox Version"
+echo -e "---------------"
+firefox --version
+echo -e "\nChrome Version"
+echo -e "--------------"
+chrome --version
 
 exit 0
