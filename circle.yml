@@ -5,6 +5,8 @@ machine:
 dependencies:
   post:
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
+    - chmod +x getBuildInfo.sh
+    - ./getBuildInfo.sh
     
 test:
   override:
