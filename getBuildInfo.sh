@@ -17,14 +17,22 @@ docker version 2>> /dev/null
 echo -e "\nPre-installed Ruby versions"
 echo -e "---------------------------"
 ruby --version
-echo -e "\nPre-installed Node.js versions"
+echo -e "\nPre-installed Node.js version"
 echo -e "------------------------------"
 node --version
-echo -e "\nPre-installed Redis versions"
+echo -e "\nPre-installed Redis version"
 echo -e "----------------------------"
 redis --version
 echo -e "\nriak version"
 echo -e "------------"
-riak --version
-
+riak version
+echo -e "\nMongoDB version"
+echo -e "---------------"
+mongodb --version
+echo -e "\ncouchDB version"
+echo -e "---------------"
+couchdb --version
+echo -e "\nNeo4j version"
+echo -e "-------------"
+neo4j --version
 exit 0
