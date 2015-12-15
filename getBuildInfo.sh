@@ -58,7 +58,7 @@ curl -s http://127.0.0.1:5984/ | grep -m 1 -Po '"version":.*?[^\\]",'
 echo -e "\nNeo4j version"
 echo -e "-------------"
 # This is a hack, and I don't like it
-grep "version" /usr/share/neo4j/system/resources/org.neo4j.server.plist
+curl -s -XGET http://localhost:7474/db/data/
 echo -e "\nRabbitMQ Version"
 echo -e "--------------"
 sudo rabbitmqctl status | grep "RabbitMQ"
@@ -80,11 +80,5 @@ ant -version
 echo -e "\nmvn version"
 echo -e "--------------"
 mvn --version
-echo -e "\nJava Version"
-echo -e "--------------"
-java -version | grep "java version"
-echo -e "\nDefault locale"
-echo -e "--------------"
-echo $LANG
 
 exit 0
