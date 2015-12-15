@@ -1,0 +1,12 @@
+machine:
+  node:
+    version 12.0
+    
+dependancies:
+  pre:
+    - nvm install 4.0
+    
+test:
+  overide:
+    - node --version
+    - nvm use 4.0; node --version
