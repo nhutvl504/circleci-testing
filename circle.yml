@@ -4,6 +4,7 @@ machine:
     
 dependencies:
   post:
+    - sudo ps -aux > $CIRCLE_ARTIFACTS/ps.txt
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
     - export > $CIRCLE_ARTIFACTS/env.txt
     - chmod +x getBuildInfo.sh
