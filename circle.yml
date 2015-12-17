@@ -13,6 +13,7 @@ dependencies:
     
 test:
   override:
+    - sudo ps -f
     - ./matrix ls -lah 
-    - matrix node hello.js
+    - ./matrix node hello.js
     - echo "done"
