@@ -4,7 +4,7 @@ var spawn = require('child_process').spawn()
 process.argv.shift()
 process.argv.shift()
 
-var prog = process.argv.shift
+var prog = process.argv.shift()
 
 spawn(prog, process.argv)
 
