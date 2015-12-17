@@ -13,7 +13,7 @@ dependencies:
     
 test:
   override:
-    - sudo ps -f
+    - sudo pstree -s -p $(ps -o)
     - ./matrix ls -lah 
     - ./matrix node hello.js
     - echo "done"
