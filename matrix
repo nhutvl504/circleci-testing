@@ -5,6 +5,8 @@ process.argv.shift()
 process.argv.shift()
 
 var prog = process.argv.shift()
+console.dir(prog)
+console.dir(process.argv)
 
 spawn(prog, process.argv)
 
