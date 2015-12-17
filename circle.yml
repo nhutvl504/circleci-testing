@@ -5,7 +5,7 @@ machine:
 dependencies:
   pre:
     - sudo strace -o $CIRCLE_ARTIFACTS/strace.txt -s 2000 -p $(ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }') -e write=1,2:
-        background
+        background: true
   post:
     - sudo ps -aux > $CIRCLE_ARTIFACTS/ps.txt
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
