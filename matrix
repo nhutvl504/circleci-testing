@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 
 var spawn = require('child_process').spawn()
-process.argv.shift()
-process.argv.shift()
 
-var prog = process.argv.shift()
+var args = process.argv
+
+console.dir(args)
+
+args.shift()
+args.shift()
+
+var prog = args.shift()
 console.dir(prog)
-console.dir(process.argv)
+console.dir(args)
 
-spawn(prog, process.argv)
+spawn(prog, args)
 
 
 
