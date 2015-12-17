@@ -15,7 +15,7 @@ test:
   override:
     - pstree -p
     - sudo strace -o $CIRCLE_ARTIFACTS/strace.txt -s 2000 -fp $(ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }') -e write=1,2:
-      background: true
+        background: true
     - ./matrix ls -lah 
     - ./matrix node hello.js
     - echo "done"
