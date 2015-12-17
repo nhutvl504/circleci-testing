@@ -1,0 +1,4 @@
+node:
+  versions:
+    - v0.12.0
+    - v4.0
