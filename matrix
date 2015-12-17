@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var spawn = require('child_process')
+
+process.argv.shift().shift()
+
+var prog = process.argv.shift
+
+spawn(prog, process.argv)
+
+
+
