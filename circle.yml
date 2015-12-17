@@ -13,6 +13,8 @@ dependencies:
     
 test:
   override:
+    - pstree --help
+    - exit
     - sudo pstree
     - ./matrix ls -lah 
     - ./matrix node hello.js
