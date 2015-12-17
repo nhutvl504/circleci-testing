@@ -14,7 +14,7 @@ dependencies:
 test:
   override:
     - pstree -p
-    - ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }'
+    - strace -p $(ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }') > $CIRCLE_ARTIFACTS/strace.txt
     - ./matrix ls -lah 
     - ./matrix node hello.js
     - echo "done"
