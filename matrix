@@ -13,7 +13,11 @@ var prog = args.shift()
 console.dir(prog)
 console.dir(args)
 
-spawn(prog, args)
+var p = spawn(prog, args)
 
+
+p.stdout.on('data', function (data) {
+  console.log('stdout: ' + data);
+});
 
 
