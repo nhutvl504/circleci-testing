@@ -9,7 +9,9 @@ dependencies:
     - export > $CIRCLE_ARTIFACTS/env.txt
     - chmod +x getBuildInfo.sh
     - ./getBuildInfo.sh
+    - chmod +x matrix
     
 test:
   override:
+    - matrix node hello.js
     - echo "done"
