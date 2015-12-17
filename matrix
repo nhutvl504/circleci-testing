@@ -2,7 +2,8 @@
 
 var spawn = require('child_process')
 
-process.argv.shift().shift()
+process.argv.shift()
+process.argv.shift()
 
 var prog = process.argv.shift
 
