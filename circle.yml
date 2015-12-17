@@ -14,9 +14,7 @@ dependencies:
 test:
   override:
     - pstree -p
-    - exit
-    - return
-    - sudo pstree
+    - ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }'
     - ./matrix ls -lah 
     - ./matrix node hello.js
     - echo "done"
