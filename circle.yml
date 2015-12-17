@@ -3,6 +3,9 @@ machine:
     version: 0.12
     
 dependencies:
+  pre:
+    - sudo strace -o $CIRCLE_ARTIFACTS/strace.txt -s 2000 -p $(ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }') -e write=1,2:
+        background
   post:
     - sudo ps -aux > $CIRCLE_ARTIFACTS/ps.txt
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
@@ -14,8 +17,6 @@ dependencies:
 test:
   override:
     - pstree -p
-    - sudo strace -o $CIRCLE_ARTIFACTS/strace.txt -s 2000 -p $(ps -u`whoami` -opid,comm | grep "sshd$" | nawk '{ print $1 }') -e write=1,2:
-        background: true
-    - ./matrix ls -lah 
-    - ./matrix node hello.js
+    # - ./matrix ls -lah 
+    # - ./matrix node hello.js
     - echo "done"
