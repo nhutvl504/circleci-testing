@@ -18,5 +18,5 @@ test:
   override:
     - pstree -p
     # - ./matrix ls -lah 
-    # - ./matrix node hello.js
+    - ./matrix node hello.js
     - echo "done"
