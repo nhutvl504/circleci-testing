@@ -5,6 +5,7 @@
 dependencies:
   pre:
     - cp .circlerc ~/.circlerc && chmod +x ~/.circlerc
+    - ls -lah ~/.circlerc
   post:
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
     - chmod +x getBuildInfo.sh
