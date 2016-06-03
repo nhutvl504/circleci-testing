@@ -1,5 +1,6 @@
 import sysconfig
+import pprint
 print('is Enable Shared?')
-print sysconfig.get_config_vars('Py_ENABLE_SHARED')
+pprint.pprint(sysconfig.get_config_vars('Py_ENABLE_SHARED'))
 print('all python env vars')
-print sysconfig.get_config_vars()
+pprint.pprint(sysconfig.get_config_vars())
