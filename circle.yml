@@ -4,7 +4,7 @@
     
 dependencies:
   pre:
-    - echo "alias python=python2.7-dev" > ~/.circlerc
+    - cp .circlerc ~/.circlerc
   post:
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
     - chmod +x getBuildInfo.sh
