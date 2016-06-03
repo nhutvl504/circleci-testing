@@ -3,8 +3,8 @@
 #    version: 2.7.11
     
 dependencies:
-#  pre:
-#    - sudo apt-get update -qq && sudo apt-get install -qq python2.7-dev
+  pre:
+    - echo "alias python=python2.7-dev" > ~/.circlerc
   post:
     - sudo dpkg --get-selections > $CIRCLE_ARTIFACTS/listing.txt
     - chmod +x getBuildInfo.sh
