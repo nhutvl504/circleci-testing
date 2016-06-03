@@ -1,6 +1,6 @@
 machine:
-  node:
-    version: 0.12
+  python:
+    version: pypy-2.7.11
     
 dependencies:
   post:
@@ -10,4 +10,5 @@ dependencies:
     
 test:
   override:
+    - python check_shared.py
     - echo "done"
