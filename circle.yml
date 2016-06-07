@@ -10,4 +10,4 @@ dependencies:
     
 test:
   override:
-    - echo "done"
+   - vendor/bin/phpunit --configuration circle-phpunit.xml --no-configuration
