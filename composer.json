@@ -1,0 +1,15 @@
+{
+    "name": "drazisil/fun-with-circle",
+    "description": "Circle with PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph W Becher",
+            "email": "jwbecher@drazisil.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    }
+}
