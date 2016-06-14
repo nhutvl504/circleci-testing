@@ -10,8 +10,11 @@
     crossorigin="anonymous">
   </script>
   <script>
+    function returnNewText(prefix) {
+      return prefix + new date().now();
+    }
     function buttonClick() {
-      $("#text").text("New Text");
+      $("#text").text(returnNewText("New Text"));
       return false;
     }
   </script>
