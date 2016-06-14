@@ -1,3 +1,3 @@
-    function returnNewText(prefix) {
-      return prefix;
-    }
+function returnNewText(prefix) {
+  return prefix;
+}
