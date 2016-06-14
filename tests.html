@@ -6,6 +6,7 @@
  
   <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.23.1.css">
   <script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
+  <script src="https://github.com/JamesMGreene/qunit-reporter-junit/blob/master/qunit-reporter-junit.js"></script>
   <script src="example.js"></script>
  
   <script>
@@ -16,6 +17,9 @@
     assert.equal(returnNewText("New text 3"), "New text 3");
     assert.equal(returnNewText("New text 4"), "New text 4");
   });
+  QUnit.jUnitReport = function(report) {
+    console.log(report.xml);
+};
   </script>
 </head>
 <body>
