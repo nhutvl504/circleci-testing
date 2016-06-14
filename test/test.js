@@ -1,4 +1,4 @@
-var example = require('../example.js');
+var example = require('../static/example.js');
 var assert = require('chai').assert;
 describe('Example', function() {
   it('should all pass', function() {
