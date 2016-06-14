@@ -8,6 +8,10 @@
   },
   "author": "Joseph W Becher <jwbecher@drazisil.com> (drazisil)",
   "license": "UNLICENSED",
+    "repository": {
+    "type": "git",
+    "url": "git@github.com:drazisil/fun-with-circle.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.1",
