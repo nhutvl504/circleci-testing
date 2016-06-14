@@ -9,9 +9,10 @@
     integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
     crossorigin="anonymous">
   </script>
+  <script src="example.js"></script>
   <script>
     function buttonClick() {
-      $(#text).innerHtml = "New Text";
+      $("#text").text(returnNewText("New Text"));
       return false;
     }
   </script>
