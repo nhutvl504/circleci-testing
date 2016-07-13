@@ -8,5 +8,4 @@ dependencies:
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - fail
