@@ -1,5 +1,11 @@
 # let's get Classical
 class LearnRuby
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
   # so, I'm asleep still, so this is even more rambling
   def some_words()
     # I should try a gets
@@ -16,5 +22,6 @@ class LearnRuby
     puts "..."
     # the universe is lonely, it wants a friend
     puts 'wasn\'t I supposed to say "hello world" at some point?'
+    puts "(btw, the answer is #{@name}"
   end
 end
