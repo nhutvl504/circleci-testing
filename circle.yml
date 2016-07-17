@@ -5,7 +5,7 @@ general:
   artifacts:
     - doc
 test:
-  override:
+  post:
     - ruby ruby-file.rb
     - rdoc
     - rdoc -C lib
