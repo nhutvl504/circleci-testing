@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'test-unit2'
+gem 'test-unit'
