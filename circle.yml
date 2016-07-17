@@ -1,4 +1,4 @@
 test:
   override:
-    - ruby -r
+    - ruby -v
     - pik list
