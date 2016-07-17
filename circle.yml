@@ -8,3 +8,4 @@ test:
   override:
     - ruby ruby-file.rb
     - rdoc
+    - rdoc -C lib
