@@ -4,3 +4,4 @@ machine:
 test:
   override:
     - ruby ruby-file.rb
+    - rdoc
