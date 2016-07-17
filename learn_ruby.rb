@@ -1,5 +1,6 @@
 # let's get Classical
 class LearnRuby
+  # the progeamming language that Ruby reminds me of
   attr_accessor :name
 
   def initialize(name)
