@@ -3,8 +3,14 @@ class LearnRuby
   # the progeamming language that Ruby reminds me of
   attr_accessor :name
 
+  # what language does Ruby most remind you of?
   def initialize(name)
     @name = name
+  end
+
+  # and don't say Perl
+  def check_name
+    puts 'why do you think that?' if @name == 'Perl'
   end
 
   # so, I'm asleep still, so this is even more rambling
@@ -23,6 +29,7 @@ class LearnRuby
     puts "..."
     # the universe is lonely, it wants a friend
     puts 'wasn\'t I supposed to say "hello world" at some point?'
+    puts check_name
     puts "(btw, the answer is #{@name}"
   end
 end
