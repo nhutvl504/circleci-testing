@@ -1,4 +1,5 @@
 test:
   override:
     - ruby -v
-    - pik list
+    - rvm list rubies
+    - rvm list known
