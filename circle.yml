@@ -7,5 +7,6 @@ general:
 test:
   post:
     - ruby ruby-file.rb
+    - ruby test_learn_ruby.rb
     - rdoc
     - rdoc -C lib
