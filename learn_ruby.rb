@@ -29,7 +29,7 @@ class LearnRuby
     puts "..."
     # the universe is lonely, it wants a friend
     puts 'wasn\'t I supposed to say "hello world" at some point?'
-    puts check_name
+    check_name
     puts "(btw, the answer is #{@name}"
   end
 end
