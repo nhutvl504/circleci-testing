@@ -2,6 +2,11 @@ machine:
   node:
     version: 0.12
     
+general:
+  branches:
+    only:
+      - testing-tag-deploy
+    
 dependencies:
   pre:
     - wget https://github.com/tcnksm/ghr/releases/download/v0.4.0/ghr_v0.4.0_linux_amd64.zip
