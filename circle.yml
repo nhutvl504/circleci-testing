@@ -1,12 +1,18 @@
 machine:
-  node:
-    version: 0.12
+  python:
+    version: 2.7.11
     
 dependencies:
   pre:
-    - nvm install 4.0
+    - sudo apt-get install build-essential git cmake libqt4-dev python2.7-dev libxml2-dev libxslt1-dev
+    - wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+    - sudo python2.7 get-pip.py
+    - sudo pip2.7 install wheel
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - wget https://pypi.python.org/packages/source/S/Shiboken/Shiboken-1.2.2.tar.gz
+    - tar -xvzf Shiboken-1.2.2.tar.gz
+    - python2.7 setup.py bdist_wheel --qmake=/usr/bin/qmake-qt4:
+        pwd: Shiboken-1.2.2
+
