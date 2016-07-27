@@ -4,7 +4,6 @@ machine:
     
 dependencies:
   pre:
-    - find / -name libpython*
     - sudo apt-get update
     - sudo apt-get install build-essential git cmake libqt4-dev python2.7-dev libxml2-dev libxslt1-dev
     - wget https://bootstrap.pypa.io/get-pip.py
@@ -15,7 +14,7 @@ test:
   override:
     - wget https://pypi.python.org/packages/source/S/Shiboken/Shiboken-1.2.2.tar.gz
     - tar -xvzf Shiboken-1.2.2.tar.gz
-    - cp /usr/lib/x86_64-linux-gnu/libpython2.7.so /opt/circleci/python/2.7.11/lib/libpython2.7.so
+    - cp /usr/lib/x86_64-linux-gnu/libpython2.7.so /opt/circleci/python/2.7.6/lib/libpython2.7.so
     - python2.7 setup.py bdist_wheel --qmake=/usr/bin/qmake-qt4:
         pwd: Shiboken-1.2.2
 
