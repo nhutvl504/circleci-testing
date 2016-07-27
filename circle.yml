@@ -4,7 +4,7 @@ machine:
     
 dependencies:
   pre:
-    - sudo find / -name libpython
+    - sudo find / -name libpython*
     - sudo apt-get update
     - sudo apt-get install build-essential git cmake libqt4-dev python2.7-dev libxml2-dev libxslt1-dev
     - wget https://bootstrap.pypa.io/get-pip.py
