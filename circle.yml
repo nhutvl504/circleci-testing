@@ -14,7 +14,7 @@ test:
   override:
     - wget https://pypi.python.org/packages/source/S/Shiboken/Shiboken-1.2.2.tar.gz
     - tar -xvzf Shiboken-1.2.2.tar.gz
-    - copy '/usr/lib/x86_64-linux-gnu/' >> /etc/ld.so.conf && ldconfig
+    - sudo copy '/usr/lib/x86_64-linux-gnu/' >> /etc/ld.so.conf && sudo ldconfig
     - python2.7 setup.py bdist_wheel --qmake=/usr/bin/qmake-qt4:
         pwd: Shiboken-1.2.2
 
