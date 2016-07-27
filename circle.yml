@@ -18,6 +18,7 @@ test:
     - sudo ls -lah /etc/ld.so.conf.d/
     - echo '/usr/lib/x86_64-linux-gnu/libpython2.7.so.1'
     - sudo ls -lahR /usr/lib/x86_64-linux-gnu/ > $CIRCLE_ARTIFACTS/ls.txt
+    - cp /usr/lib/x86_64-linux-gnu/libpython2.7.so /opt/circleci/python/2.7.11/lib/libpython2.7.so
     - LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/ python2.7 setup.py bdist_wheel --qmake=/usr/bin/qmake-qt4:
         pwd: Shiboken-1.2.2
 
