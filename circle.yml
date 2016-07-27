@@ -4,6 +4,7 @@ machine:
     
 dependencies:
   pre:
+    - sudo find / -name libpython*
     - sudo apt-get update
     - sudo apt-get install build-essential git cmake libqt4-dev python2.7-dev libxml2-dev libxslt1-dev
     - wget https://bootstrap.pypa.io/get-pip.py
@@ -16,6 +17,7 @@ test:
     - tar -xvzf Shiboken-1.2.2.tar.gz
     - sudo cat /etc/ld.so.conf
     - sudo ls -lah /etc/ld.so.conf.d/
+    - echo '/usr/lib/x86_64-linux-gnu/libpython2.7.so.1'
     - sudo ls -lah /usr/lib/x86_64-linux-gnu/
     - sudo copy '/usr/lib/x86_64-linux-gnu/' >> /etc/ld.so.conf && sudo ldconfig
     - python2.7 setup.py bdist_wheel --qmake=/usr/bin/qmake-qt4:
