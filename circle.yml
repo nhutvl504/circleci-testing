@@ -6,7 +6,7 @@ dependencies:
   pre:
     - sudo apt-get update
     - sudo apt-get install build-essential git cmake libqt4-dev python2.7-dev libxml2-dev libxslt1-dev
-    - wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+    - wget https://bootstrap.pypa.io/get-pip.py
     - sudo python2.7 get-pip.py
     - sudo pip2.7 install wheel
     
