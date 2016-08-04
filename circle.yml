@@ -7,4 +7,4 @@ machine:
 test:
   override:
     - node --version
-    - java --version
+    - java -version
