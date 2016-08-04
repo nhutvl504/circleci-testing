@@ -1,12 +1,10 @@
 machine:
   node:
-    version: 0.12
-    
-dependencies:
-  pre:
-    - nvm install 4.0
-    
+    version: 6.1.0
+  java:
+    version: openjdk8
+
 test:
   override:
     - node --version
-    - nvm use 4.0; node --version
+    - java --version
