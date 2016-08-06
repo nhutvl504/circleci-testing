@@ -7,9 +7,9 @@ dependencies:
     - nvm install 4.0
 #    - chrome --version
     - sudo apt-get install google-chrome-stable
-    - chrome --version
+    - google-chrome --version
     - sudo apt-get install google-chrome-stable>=49.0.2623.0
-    - chrome --version
+    - google-chrome --version
     
 test:
   override:
