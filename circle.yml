@@ -5,7 +5,7 @@ machine:
 dependencies:
   pre:
     - nvm install 4.0
-    - chrome --version
+#    - chrome --version
     - sudo apt-get install google-chrome-stable=49.0.2623.0
     - chrome --version
     - sudo apt-get install google-chrome-stable>=49.0.2623.0
