@@ -6,8 +6,8 @@ dependencies:
   pre:
     - nvm install 4.0
     - google-chrome --version
+    - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list  
     - sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google-chrome.list" "/opt/google/chrome/cron/google-chrome"
-#    - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list  
     - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -  
     - sudo apt-get update
     - sudo apt-get install google-chrome-stable
