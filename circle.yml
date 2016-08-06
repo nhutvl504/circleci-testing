@@ -11,8 +11,8 @@ dependencies:
     - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -  
     - sudo apt-get update
     - sudo apt-get install google-chrome-stable
-    - google-chrome --version
-    - sudo apt-get install google-chrome-stable>=49.0.2623.0
+#    - google-chrome --version
+#    - sudo apt-get install google-chrome-stable>=49.0.2623.0
     - google-chrome --version
     
 test:
