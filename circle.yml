@@ -11,7 +11,7 @@ test:
     - node --version
     - nvm use 4.0; node --version
     - | 
-      curl https://circleci.com/api/v1.1/project/github/drazisil/circleci-testing/$CIRCLE_BUILD_NUM/artifacts?circle-token=$API_TOKEN -H "Accept: application/json"
-      curl https://circleci.com/api/v1.1/project/github/drazisil/circleci-testing/$CIRCLE_BUILD_NUM?circle-token=$API_TOKEN -H "Accept: application/json"
+      curl https://circleci.com/api/v1.1/project/github/drazisil/circleci-testing/$CIRCLE_BUILD_NUM/artifacts?circle-token=$API_TOKEN -H "Accept: application/json" > $CIRCLE_ARTIFACTS/api.txt
+      curl https://circleci.com/api/v1.1/project/github/drazisil/circleci-testing/$CIRCLE_BUILD_NUM?circle-token=$API_TOKEN -H "Accept: application/json" > $CIRCLE_ARTIFACTS/api2.txt
     - echo "moo" > $CIRCLE_ARTIFACTS/moo.txt
     
