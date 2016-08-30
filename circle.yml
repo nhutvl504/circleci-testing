@@ -2,11 +2,18 @@ machine:
   node:
     version: 0.12
     
+  environment:
+    GIT_HASH: $(git rev-parse --short HEAD)
+    BUILD_NUMBER: $(git rev-list HEAD | wc -l | tr -d ' ')
+    GIT_LOG: $(git log --oneline remotes/origin/log..remotes/origin/master)
+    
 dependencies:
   pre:
     - nvm install 4.0
     
 test:
   override:
+    - echo $GIT_HASH
+    - echo $BUILD_NUMBER
+    - echo $GIT_LOG
     - node --version
-    - nvm use 4.0; node --version
