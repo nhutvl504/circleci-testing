@@ -3,9 +3,9 @@ machine:
     version: 0.12
     
   environment:
-    GIT_HASH: $(git rev-parse --short HEAD)
-    BUILD_NUMBER: $(rev-list HEAD | wc -l | tr -d ' ')
-    GIT_LOG: $(git log --oneline remotes/origin/log..remotes/origin/matrix-node)
+    GIT_HASH: "$(git rev-parse --short HEAD)"
+    BUILD_NUMBER: "$(rev-list HEAD | wc -l | tr -d ' ')"
+    GIT_LOG: "$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)"
     
 dependencies:
   pre:
@@ -14,9 +14,9 @@ dependencies:
 test:
   override:
     - '$(echo "moo")'
-    - git rev-parse --short HEAD
-    - git rev-list HEAD | wc -l | tr -d ' '
-    - git log --oneline remotes/origin/log..remotes/origin/matrix-node
+    - '$(git rev-parse --short HEAD)'
+    - '$(git rev-list HEAD | wc -l | tr -d ' ')'
+    - '$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)
     - git rev-parse --short HEAD
     - git rev-list HEAD | wc -l | tr -d ' '
     - git log --oneline remotes/origin/log..remotes/origin/matrix-node 
