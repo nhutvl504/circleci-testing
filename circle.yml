@@ -4,7 +4,7 @@ machine:
     
 dependencies:
   pre:
-    - sorce gitenvs.sh
+    - source gitenvs.sh
 
 test:
   override:
