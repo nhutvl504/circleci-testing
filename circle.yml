@@ -3,7 +3,8 @@ machine:
     version: 0.12
     
   environment:
-    GIT_HASH: "$(git rev-parse --short HEAD)"
+    GIT_HASH: "$(git rev-parse --short HEAD)":
+      PWD: ~/$CIRCLE_PROJECT_REPONAME
     BUILD_NUMBER: "$(rev-list HEAD | wc -l | tr -d ' ')"
     GIT_LOG: "$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)"
     JUNK: "$(git test-me)"  
