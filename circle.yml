@@ -6,21 +6,14 @@ machine:
     GIT_HASH: "$(git rev-parse --short HEAD)"
     BUILD_NUMBER: "$(rev-list HEAD | wc -l | tr -d ' ')"
     GIT_LOG: "$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)"
-    
-dependencies:
-  pre:
-    - nvm install 4.0
-    
+    JUNK: "$(git test-me)"    
+
 test:
   override:
-    - "$(echo 'moo')"
-    - "$(git rev-parse --short HEAD)"
-    - "$(git rev-list HEAD | wc -l | tr -d ' ')"
-    - "$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)"
+    - export
     - git rev-parse --short HEAD
     - git rev-list HEAD | wc -l | tr -d ' '
     - git log --oneline remotes/origin/log..remotes/origin/matrix-node 
     - echo $GIT_HASH
     - echo $BUILD_NUMBER
     - echo $GIT_LOG
-    - node --version
