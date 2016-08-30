@@ -16,6 +16,9 @@ test:
     - $(git rev-parse --short HEAD)
     - $(git rev-list HEAD | wc -l | tr -d ' ')
     - $(git log --oneline remotes/origin/log..remotes/origin/master)
+    - git rev-parse --short HEAD
+    - git rev-list HEAD | wc -l | tr -d ' '
+    - git log --oneline remotes/origin/log..remotes/origin/master)  
     - echo $GIT_HASH
     - echo $BUILD_NUMBER
     - echo $GIT_LOG
