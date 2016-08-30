@@ -13,10 +13,10 @@ dependencies:
     
 test:
   override:
-    - '$(echo "moo")'
-    - '$(git rev-parse --short HEAD)'
-    - '$(git rev-list HEAD | wc -l | tr -d ' ')'
-    - '$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)
+    - "$(echo 'moo')"
+    - "$(git rev-parse --short HEAD)"
+    - "$(git rev-list HEAD | wc -l | tr -d ' ')"
+    - "$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)"
     - git rev-parse --short HEAD
     - git rev-list HEAD | wc -l | tr -d ' '
     - git log --oneline remotes/origin/log..remotes/origin/matrix-node 
