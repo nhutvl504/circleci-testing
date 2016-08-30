@@ -2,12 +2,9 @@ machine:
   node:
     version: 0.12
     
-  environment:
-    GIT_HASH: cd ~/$CIRCLE_PROJECT_REPONAME && "$(git rev-parse --short HEAD)"
-    BUILD_NUMBER: "$(rev-list HEAD | wc -l | tr -d ' ')"
-    GIT_LOG: "$(git log --oneline remotes/origin/log..remotes/origin/matrix-node)"
-    JUNK: "$(git test-me)"  
-    JUNK2: "$(echo 'I'm a test')"   
+dependencies:
+  pre:
+    - sorce gitenvs.sh
 
 test:
   override:
