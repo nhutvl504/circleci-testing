@@ -1,12 +1,13 @@
+## Customize machine setup
 machine:
-  node:
-    version: 0.12
-    
-dependencies:
-  pre:
-    - nvm install 4.0
+  java:
+    # our Standard Runtime and Flexible Runtime are both still using OpenJDK7 (CicleCI defaults to OpenJDK8)
+    version: openjdk7
+  post:
+    - echo $JAVA_HOME
+    - java -version
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - echo $JAVA_HOME
+    - java -version
