@@ -1,12 +1,7 @@
 machine:
-  node:
-    version: 0.12
-    
-dependencies:
-  pre:
-    - nvm install 4.0
+  php:
+    version: 5.3.10
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - php --info
