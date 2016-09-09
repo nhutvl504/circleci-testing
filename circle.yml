@@ -11,3 +11,4 @@ test:
   override:
     - echo $JAVA_HOME
     - java -version
+    - echo true
