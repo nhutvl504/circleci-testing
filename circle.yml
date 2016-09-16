@@ -4,9 +4,9 @@ machine:
     
 general:
   artifacts:
-    - "/home/ubuntu/.android/avd/circleci-android22.avd" # relative to the build directory
-    - "/home/ubuntu/.android/avd/circleci-android23.avd" # relative to the build directory
-    - "/usr/local/android-sdk-linux/system-images" # relative to the build directory
+    #- "/home/ubuntu/.android/avd/circleci-android22.avd" # relative to the build directory
+    #- "/home/ubuntu/.android/avd/circleci-android23.avd" # relative to the build directory
+    #- "/usr/local/android-sdk-linux/system-images" # relative to the build directory
     
 dependencies:
   pre:
