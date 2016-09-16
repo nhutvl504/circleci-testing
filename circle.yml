@@ -2,6 +2,10 @@ machine:
   node:
     version: 0.12
     
+general:
+  artifacts:
+    - "/.android" # relative to the build directory
+    
 dependencies:
   pre:
     - nvm install 4.0
