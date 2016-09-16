@@ -4,7 +4,8 @@ machine:
     
 general:
   artifacts:
-    - "/.android" # relative to the build directory
+    - "/usr/local/android-sdk-linux/avd" # relative to the build directory
+    - "/usr/local/android-sdk-linux/system-images" # relative to the build directory
     
 dependencies:
   pre:
@@ -12,5 +13,5 @@ dependencies:
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - android list avd
+    - android list target
