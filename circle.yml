@@ -16,5 +16,7 @@ test:
   override:
     - android list avd
     - android list target
+    - ls -r /home/ubuntu/.android/avd/circleci-android22.avd/
     - zip -r $CIRCLE_ARTIFACTS/circleci-android22.zip /home/ubuntu/.android/avd/circleci-android22.avd/
+    - ls -r /home/ubuntu/.android/avd/circleci-android23.avd/
     - zip -r $CIRCLE_ARTIFACTS/circleci-android23.zip /home/ubuntu/.android/avd/circleci-android23.avd/
