@@ -9,6 +9,7 @@ dependencies:
     - export > $CIRCLE_ARTIFACTS/env.txt
     - chmod +x getBuildInfo.sh
     - ./getBuildInfo.sh
+    car ~/.circlerc > $CIRCLE_ARTIFACTS/circlerc.txt
     
 test:
   override:
