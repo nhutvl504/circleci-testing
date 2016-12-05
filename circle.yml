@@ -4,4 +4,4 @@ machine:
     
 test:
   override:
-    - sudo find / -name  javadoc -exec ls -lah {} \;
+    - sudo update-alternatives --display javadoc
