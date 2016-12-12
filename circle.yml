@@ -14,3 +14,8 @@ dependencies:
 test:
   override:
     - echo "done"
+    
+notify:
+  webhooks:
+    # A list of hook hashes, containing the URL field
+    - url: http://bc9c7112.ngrok.io/hooks/circleci
