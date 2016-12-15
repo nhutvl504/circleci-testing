@@ -2,6 +2,13 @@ machine:
   node:
     version: 0.12
     
+checkout:
+  post:
+    - mkdir ~/.pip/cache
+    
+cache_directories:
+    - ~/.pip/cache
+    
 dependencies:
   pre:
     - nvm install 4.0
