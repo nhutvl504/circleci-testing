@@ -8,4 +8,5 @@ dependencies:
     
 test:
   override:
+    - ab https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.3.3.tar.bz2
     - ab https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/14.04/x86_64/ruby-2.3.3.tar.bz2
