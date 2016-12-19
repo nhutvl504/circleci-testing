@@ -4,9 +4,8 @@ machine:
     
 dependencies:
   pre:
-    - nvm install 4.0
+    - sudo apt-get install apache-utils
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - ab https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.3.3.tar.bz2
