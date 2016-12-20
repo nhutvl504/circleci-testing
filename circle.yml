@@ -1,6 +1,7 @@
-machine:
-  pre:
+node:
+  post:
     - pwd
+    - echo "In ..."
     
   node:
     version: 0.12
