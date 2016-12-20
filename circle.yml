@@ -10,3 +10,7 @@ test:
   override:
     - node --version
     - nvm use 4.0; node --version
+    
+teardown:
+  pre:
+    - echo "In teardown"
