@@ -1,4 +1,7 @@
 machine:
+  pre:
+    - pwd
+    
   node:
     version: 0.12
     
