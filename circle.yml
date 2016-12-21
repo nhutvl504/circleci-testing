@@ -1,12 +1,12 @@
 machine:
   node:
-    version: 0.12
+    version: 5.1.0
     
 dependencies:
   pre:
-    - nvm install 4.0
+    - echo "None, for now"
     
 test:
   override:
-    - node --version
-    - nvm use 4.0; node --version
+    - nvm use 5.0.0; node --version; npm --version
+    - nvm use 5.1.0; node --version; npm --version
