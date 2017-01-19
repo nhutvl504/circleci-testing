@@ -10,6 +10,5 @@ test:
   override:
     - echo "Section 1"
     
-test:
-  override:
-    - echo "Section 2"
+
+    - echo "Testing PR status web hook"
