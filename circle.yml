@@ -1,8 +1,16 @@
 checkout:
+  pre:
+    - echo "Foo"
   override:
-    - echo "Nope"
+    - echo "Bar"
+  post:
+    - echo "Foo"
     
 dependencies:
-  pre:
+  override:
     - echo "None, for now"
+    
+test:
+  override:
+    - echo "No tests"
 
