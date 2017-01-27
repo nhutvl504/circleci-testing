@@ -1,3 +1,7 @@
+checkout:
+  pre:
+    - echo "Feed me semour..."
+
 machine:
   node:
     version: 5.1.0
