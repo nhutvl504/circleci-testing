@@ -14,4 +14,7 @@
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
+    <logging>
+        <log type="junit" target="$CIRCLE_TEST_REPORTS/junit.xml" logIncompleteSkipped="false"/>
+    </logging>
 </phpunit>
