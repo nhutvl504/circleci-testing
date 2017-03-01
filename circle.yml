@@ -11,4 +11,4 @@ test:
     - nvm use 5.0.0; node --version; npm --version
     - nvm use 5.1.0; node --version; npm --version
   post:
-    - echo "moo!" > "$CIRCLE_ARTIFACTS/im a file.txt"
+    - echo "moo!" > "$CIRCLE_ARTIFACTS/im a file.txt.not a file.text"
