@@ -1,8 +1,8 @@
 version: 2
-jobs:
+executorType: machine
+stages:
   build:
     working_directory: ~/circleci-testing
-    machine: true
     steps:
       - checkout
       - run: mkdir artifacts
