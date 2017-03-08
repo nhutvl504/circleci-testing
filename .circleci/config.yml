@@ -14,3 +14,4 @@ stages:
       - run: cat ~/.circlerc > artifacts/circlerc.txt
       - store_artifacts:
           path: ~/circleci-testing/artifacts
+          destination: drazisil
