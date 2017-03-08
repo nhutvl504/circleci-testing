@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/circleci-testing
+    machine: true
+    steps:
+      - checkout
+      - run: mkdir artifacts
+      - run: sudo ps -aux > artifacts/ps.txt
+      - run: sudo dpkg --get-selections > artifacts/listing.txt
+      - run: export > artifacts/env.txt
+      - run: chmod +x getBuildInfo.sh
+      - run: ./getBuildInfo.sh
+      - run: cat ~/.circlerc > artifacts/circlerc.txt
+      - store_artifacts:
+          path: ~/circleci-testing/artifacts
