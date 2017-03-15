@@ -17,7 +17,7 @@ test:
     - android list avd
     - android list target
     - echo "no" | android -v create avd -n CUSTOM_ANDROID22_ARM --target "android-22" --abi "default/armeabi-v7a" -c 128M
-    - echo "no" | android -v create avd -n CUSTOM_ANDROID22_APIS_ARM --target "Google Inc.:Google APIs:22" --abi "google_apis/armeabi-v7a" -c 128M
+    # - echo "no" | android -v create avd -n CUSTOM_ANDROID22_APIS_ARM --target "Google Inc.:Google APIs:22" --abi "google_apis/armeabi-v7a" -c 128M
     - ls -r /home/ubuntu/.android/avd/
     - zip -r $CIRCLE_ARTIFACTS/avds.zip /home/ubuntu/.android/avd/
 
