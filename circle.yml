@@ -17,5 +17,5 @@ test:
     - android list avd
     - android list target
     - ls -r /home/ubuntu/.android/avd/
-    - zip -r $CIRCLE_ARTIFACTS/circleci-android22.zip /home/ubuntu/.android/avd/
+    - zip -r $CIRCLE_ARTIFACTS/avds.zip /home/ubuntu/.android/avd/
 
