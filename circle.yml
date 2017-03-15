@@ -16,6 +16,7 @@ test:
   override:
     - android list avd
     - android list target
+    - ls $ANDROID_SDK_HOME/tools
     - sdkmanager create avd -n CUSTOM_ANDROID22_ARM --package "system-images;android-22;google_apis;armeabi-v7a" --tag "google_apis" --device "Nexus 5" -c 128M
     - ls -r /home/ubuntu/.android/avd/
     - zip -r $CIRCLE_ARTIFACTS/avds.zip /home/ubuntu/.android/avd/
