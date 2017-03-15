@@ -1,4 +1,4 @@
-hmachine:
+machine:
   node:
     version: 0.12
     
