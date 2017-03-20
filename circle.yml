@@ -1,11 +1,8 @@
-machine:
-  node:
-    version: 5.1.0
-    
 dependencies:
   pre:
     - echo "None, for now"
     
 test:
   override:
-    - cp junit.xml $CIRCLE_TEST_REPORTS/junit/unit.xml
+    = mkdir $CIRCLE_TEST_REPORTS/phpunit
+    - cp junit.xml $CIRCLE_TEST_REPORTS/phpunit/unit.xml
