@@ -31,6 +31,9 @@ echo -e "\nLinux Version"
 echo -e "-------------"
 echo -e 
 uname -r
+echo -e "\nMaven Version"
+echo -e "-------------"
+maven --version
 echo -e "\nGCC Version"
 echo -e "-------------"
 gcc --version | grep "gcc"
