@@ -10,4 +10,4 @@ test:
   override:
     - npm install -g mocha
     - mkdir $CIRCLE_TEST_REPORTS/junit
-    - mocha -R --reporter-options output=$CIRCLE_TEST_REPORTS/junit/filename.xml
+    - mocha -R xunit --reporter-options output=$CIRCLE_TEST_REPORTS/junit/filename.xml
