@@ -4,7 +4,7 @@ machine:
     - sudo apt-get update
     - sudo apt-get install && sudo apt-get install php7.0
   php:
-    version: 7.0.5
+    version: 7.0.24
     
 dependencies:
   pre:
