@@ -1,17 +1,12 @@
 version: 2
-executorType: machine
-stages:
+jobs:
   build:
-    working_directory: ~/circleci-testing
     steps:
       - checkout
-      - run: mkdir artifacts
-      - run: sudo ps -aux > artifacts/ps.txt
-      - run: sudo dpkg --get-selections > artifacts/listing.txt
-      - run: export > artifacts/env.txt
-      - run: chmod +x getBuildInfo.sh
-      - run: ./getBuildInfo.sh
-      - run: cat ~/.circlerc > artifacts/circlerc.txt
-      - store_artifacts:
-          path: ~/circleci-testing/artifacts
-          destination: drazisil
+      - run: |
+          COMMIT_SHA=$(git rev-parse --short HEAD) \
+          echo ${COMMIT_SHA}
+          COMMIT_SHA=$(git rev-parse --short HEAD)
+          echo ${COMMIT_SHA}
+          echo $COMMIT_SHA
+
