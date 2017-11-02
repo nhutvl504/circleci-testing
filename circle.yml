@@ -8,5 +8,5 @@ dependencies:
     
 test:
   override:
-    - nvm use 5.0.0; node --version; npm --version
-    - nvm use 5.1.0; node --version; npm --version
+    - where sdkmanager 
+    - sdkmanager 
