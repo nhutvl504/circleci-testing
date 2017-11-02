@@ -8,5 +8,6 @@ dependencies:
     
 test:
   override:
+    - sudo find / -name sdkmanager 
     - where sdkmanager 
     - sdkmanager 
