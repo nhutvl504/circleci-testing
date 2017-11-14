@@ -1,17 +1,15 @@
 version: 2
-executorType: machine
-stages:
+jobs:
   build:
-    working_directory: ~/circleci-testing
+    docker:
+      - image: circleci/openjdk:8
+        environment:
+          CTM_BASE_URL: http://127.0.0.1:9000
+
+      - image: drazisil/private-test:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+
     steps:
       - checkout
-      - run: mkdir artifacts
-      - run: sudo ps -aux > artifacts/ps.txt
-      - run: sudo dpkg --get-selections > artifacts/listing.txt
-      - run: export > artifacts/env.txt
-      - run: chmod +x getBuildInfo.sh
-      - run: ./getBuildInfo.sh
-      - run: cat ~/.circlerc > artifacts/circlerc.txt
-      - store_artifacts:
-          path: ~/circleci-testing/artifacts
-          destination: drazisil
