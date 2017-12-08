@@ -8,5 +8,6 @@ dependencies:
     
 test:
   override:
+    - cat ~/.circlecirc
     - nvm use 5.0.0; node --version; npm --version
     - nvm use 5.1.0; node --version; npm --version
