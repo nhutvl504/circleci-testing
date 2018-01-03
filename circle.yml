@@ -1,6 +1,9 @@
 machine:
   node:
-    version: 5.1.0
+    version: 8
+dependencies:
+  pre:
+    - npm i --global npm@5.5
     
 dependencies:
   pre:
@@ -8,5 +11,5 @@ dependencies:
     
 test:
   override:
-    - nvm use 5.0.0; node --version; npm --version
-    - nvm use 5.1.0; node --version; npm --version
+    - node --version; npm --version
+    - nvm use 8; node --version; npm --version
