@@ -7,6 +7,8 @@ dependencies:
     - echo "None, for now"
     - sudo ls -l /usr/bin/
     - sh pkg-versions.sh
+    - sudo updatedb
+    - sudo locate gcc
     
 test:
   override:
