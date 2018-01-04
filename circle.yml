@@ -5,6 +5,7 @@ machine:
 dependencies:
   pre:
     - echo "None, for now"
+    - sudo ls -l /usr/bin/
     
 test:
   override:
