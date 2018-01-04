@@ -6,6 +6,7 @@ dependencies:
   pre:
     - echo "None, for now"
     - sudo ls -l /usr/bin/
+    - sh pkg-versions.sh
     
 test:
   override:
