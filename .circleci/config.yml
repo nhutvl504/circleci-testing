@@ -25,7 +25,7 @@ jobs:
                     $(lsb_release -cs) \
                     stable"
                     
-           - run:
+            - run:
                name: Install Docker
                command: |
                   apt update
