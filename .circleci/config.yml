@@ -9,6 +9,10 @@ jobs:
             - checkout
 
             - setup_remote_docker
+            
+            - run:
+                name: Install Docker
+                command: apt install docker
 
             - run:
                 name: Test Docker
