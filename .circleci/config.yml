@@ -1,0 +1,26 @@
+version: 2
+
+jobs:
+  test-vekter:
+    macos:
+      xcode: "9.0"
+    steps:
+      - run: brew prune && brew update
+      - run: brew uninstall yarn
+      - run: brew install --force icu4c node@6
+      - run: brew link --overwrite --force icu4c node@6
+      - run: brew install yarn --without-node
+      - restore_cache:
+          keys:
+            - node-modules-vekter-{{ .Branch }}{{ .Environment.CIRCLE_TAG }}-
+      - run: yarn
+      - save_cache:
+          key: node-modules-vekter-{{ .Branch }}{{ .Environment.CIRCLE_TAG }}-{{ checksum "node_modules/.yarn-integrity" }}
+          paths:
+            - "node_modules"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - test-vekter
