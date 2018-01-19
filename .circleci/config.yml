@@ -14,7 +14,7 @@ jobs:
           keys:
             - node-modules-vekter-{{ .Branch }}{{ .Environment.CIRCLE_TAG }}-
       - run: yarn
-      - run: yarn check
+      - run: yarn check --integrity
       - save_cache:
           key: node-modules-vekter-{{ .Branch }}{{ .Environment.CIRCLE_TAG }}-{{ checksum "node_modules/.yarn-integrity" }}
           paths:
