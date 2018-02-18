@@ -16,5 +16,5 @@ test:
     - cd app && git clone https://github.com/nhutvl504/eShopOnWeb.git
   override:
     - ls -lsa app/eShopOnWeb
-    - cd app/eShopOnWeb/scr/Web/ && ls -lsa && dotnet restore && dotnet run
+    - cd app/eShopOnWeb/src/Web/ && ls -lsa && dotnet restore && dotnet run
     - echo "done"
