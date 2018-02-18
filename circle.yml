@@ -1,7 +1,6 @@
 general:
   artifacts:
     - "hwapp"
-    
 dependencies:
   pre:
     - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
