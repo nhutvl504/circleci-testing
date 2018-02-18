@@ -1,7 +1,7 @@
 version: 1
 general:
   artifacts:
-    - "hwapp"
+    - "app"
 dependencies:
   pre:
     - lsb_release -a
@@ -15,6 +15,7 @@ test:
     - mkdir app
     - cd app
     - git clone https://github.com/nhutvl504/eShopOnWeb.git
+    - ls -lsa
     - cd eShopOnWeb/Web
   override:
     - dotnet restore
