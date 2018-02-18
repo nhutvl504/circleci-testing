@@ -12,9 +12,10 @@ dependencies:
     - sudo apt-get install dotnet-sdk-2.0.0
 test:
   pre:
-    - mkdir hwapp
+    - mkdir app
     - cd hwapp
-    - dotnet new
+    - git clone https://github.com/nhutvl504/eShopOnWeb.git
+    - cd eShopOnWeb/Web
   override:
     - dotnet restore
     - dotnet run
