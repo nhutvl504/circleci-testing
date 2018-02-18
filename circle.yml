@@ -13,11 +13,10 @@ dependencies:
 test:
   pre:
     - mkdir app
-    - cd app
-    - git clone https://github.com/nhutvl504/eShopOnWeb.git
-    - ls -lsa
-    - cd eShopOnWeb/Web
+    - cd app && git clone https://github.com/nhutvl504/eShopOnWeb.git
+    - cd app/eShopOnWeb/Web/
   override:
+    - ls -lsa
     - dotnet restore
     - dotnet run
     - echo "done"
