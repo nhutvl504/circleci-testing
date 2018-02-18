@@ -1,12 +1,20 @@
-machine:
-  node:
-    version: 5.1.0
+general:
+  artifacts:
+    - "hwapp"
     
 dependencies:
   pre:
-    - echo "None, for now"
-    
+    - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
+    - sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
+    - sudo apt-get update
+    - sudo apt-get install dotnet-dev-1.0.0-preview2-003121
+
 test:
+  pre:
+    - mkdir hwapp
+    - cd hwapp
+    - dotnet new
   override:
-    - nvm use 5.0.0; node --version; npm --version
-    - nvm use 5.1.0; node --version; npm --version
+    - dotnet restore
+    - dotnet run
+- echo "done"
