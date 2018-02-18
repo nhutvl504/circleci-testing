@@ -17,4 +17,4 @@ test:
   override:
     - dotnet restore
     - dotnet run
-- echo "done"
+    - echo "done"
