@@ -14,9 +14,7 @@ test:
   pre:
     - mkdir app
     - cd app && git clone https://github.com/nhutvl504/eShopOnWeb.git
-    - cd app/eShopOnWeb/Web/
+    - cd app/eShopOnWeb/scr/Web/
   override:
-    - ls -lsa
-    - dotnet restore
-    - dotnet run
+    - cd app/eShopOnWeb/scr/Web/ && ls -lsa && dotnet restore && dotnet run
     - echo "done"
