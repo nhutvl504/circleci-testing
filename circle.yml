@@ -13,7 +13,7 @@ dependencies:
 test:
   pre:
     - mkdir app
-    - cd hwapp
+    - cd app
     - git clone https://github.com/nhutvl504/eShopOnWeb.git
     - cd eShopOnWeb/Web
   override:
